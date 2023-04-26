@@ -23,7 +23,7 @@
         require('../spreadsheet-reader-master/php-excel-reader/excel_reader2.php');
         require('../spreadsheet-reader-master/SpreadsheetReader_XLSX.php');
 
-        $Reader = new SpreadsheetReader_XLSX("C:/xampp/htdocs/dspaceapp/Columns.xlsx");
+        $Reader = new SpreadsheetReader_XLSX("/home/usr_pat/patrimonios-dspace-master/Columns.xlsx");
         global $Columns, $params;
         foreach ($Reader as $Row){
             //print_r($Row);
@@ -31,7 +31,7 @@
         }
         //print_r($Columns);
 
-        $Reader = new SpreadsheetReader_XLSX($_FILES["excelFile"]["tmp_name"]);
+       // $Reader = new SpreadsheetReader_XLSX($_FILES["excelFile"]["tmp_name"]);
         foreach ($Reader as $Row) {
             //print_r($Row);
             // Un item de dspace debe tener como mínimo: creador, título y fecha.
@@ -42,7 +42,7 @@
                 addRegularData( 'dc.creator', $Row[9] );
                 addRegularData( 'dc.title', $Row[0] );
                 addRegularData( 'dc.date', $dspaceDate );
-                addRegularData( 'arq.Nombre', $Row[0] );
+               /* addRegularData( 'arq.Nombre', $Row[0] );
                 addRegularData( 'arq.Direccion', $Row[1] );
                 addRepeatedData( 'arq.Pertenencia', 2, 6, $Row );
                 addRegularData( 'arq.Localidad', $Row[7] );
@@ -74,12 +74,14 @@
                 addRegularData( 'arq.ObservGenerales', $Row[200] );
                 addRegularData( 'arq.SearchString',
                     getSingleData(17, 23, $Row).', '.$Row[0].', '.$Row[7].', '.$Row[8].', '.$Row[9]
-                );
+                );*/
                 //print_r($params["body"]["metadata"]);
 
                 $jsonItem = json_encode($params['body']);
-                //echo $jsonItem;
+               // echo $jsonItem;
                 $collectionID = chooseEntidad($Row[9]);
+		echo $Row[9];
+		//echo $collectionID;
                 uploadItem($jsonItem, $collectionID, $jsessionID);
             }
         }
@@ -88,13 +90,13 @@
     function chooseEntidad($entidad){
         switch ($entidad){
             case "Yucatán":
-                return "99c2ace2-e19a-47b7-9ba9-7deb4b0819d9";
+                return "7e137ff6-ea53-4175-b254-01522fffb80b";
                 break;
             case "Campeche":
-                return "14c4f482-7c1a-4fb0-8439-e3578a7f59f0";
+                return "320f1588-c3e2-4fa7-8a33-9619e72086c9";
                 break;
             case "Quintana Roo":
-                return "fa8a0b04-5e44-4b02-affa-be1081b2533a";
+                return "2bca541e-7bc3-4e46-bc37-360c2389b1fc";
                 break;
             default:
                 break;

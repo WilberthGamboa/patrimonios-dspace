@@ -1,5 +1,21 @@
 <?php
+function config($propertie){
 
+        switch ($propertie){
+            case 'dspace.ip':
+                return "148.209.67.83";
+                break;
+            case 'dspace.port':
+                return "8080";
+                break;
+            case 'dspace.login':
+                return "email=dspace@localhost&password=dspace";
+                break;
+            default:
+                break;
+        }
+        return "";
+    }
 	
 
     function getUserSessionID(){
@@ -81,6 +97,7 @@
          * $url dirección del repositorio dspace (en este caso para consumir un servicio rest
          */
         $url = "http://".config('dspace.ip').':'.config('dspace.port')."/rest/collections/$collectionDspaceId/items";
+	echo $url;
 
         $ch = curl_init($url); //iniciar el canal de comunicación a una url definida.
 
