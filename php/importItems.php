@@ -82,20 +82,22 @@
                 /*
                 print_r($Row[23]);
                 print_r($Row[22]);
-                if ($Row[23]=="x") {
-                    echo "es una capilla";
-                    # code...
-                }
-                if ($Row[20]=="x") {
-                    echo "es una parroquia";
-                    # code...
-                }
+               
                // echo $jsonItem;
                */
               //echo $Row[9];
-              print_r($Row[7]);
-              print_r($Row[8]);
-              print_r($Row[9]);
+              //print_r($Row[7]);
+            //  print_r($Row[8]);
+            
+                //  print_r($Row[9]);
+              if ($Row[23]=="x") {
+                echo "es una capilla";
+                # code...
+            }
+            if ($Row[20]=="x") {
+                echo "es una parroquia";
+                # code...
+            }
                 $collectionID = chooseEntidad($Row[9]);
 
 		//echo $Row[9];
