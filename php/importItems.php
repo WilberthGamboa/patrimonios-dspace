@@ -23,7 +23,7 @@
         require('../spreadsheet-reader-master/php-excel-reader/excel_reader2.php');
         require('../spreadsheet-reader-master/SpreadsheetReader_XLSX.php');
 
-        $Reader = new SpreadsheetReader_XLSX("/home/usr_pat/patrimonios-dspace-master/Columns.xlsx");
+        $Reader = new SpreadsheetReader_XLSX("/home/usr_pat/patrimonios-dspace-master/datosexcel.xlsx");
         global $Columns, $params;
         foreach ($Reader as $Row){
             //print_r($Row);
