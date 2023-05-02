@@ -80,6 +80,7 @@
 
                 $jsonItem = json_encode($params['body']);
                 print_r($Row[23]);
+                print_r($Row[22]);
                 if ($Row[23]=="x") {
                     echo "es una capilla";
                     # code...
