@@ -89,7 +89,7 @@
               //print_r($Row[7]);
             //  print_r($Row[8]);
             
-                 print_r($Row[9]);
+              
               if ($Row[23]=="x") {
                 echo "es una capilla";
                 # code...
