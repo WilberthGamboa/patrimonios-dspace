@@ -27,7 +27,7 @@
         global $Columns, $params;
         foreach ($Reader as $Row){
             //ola 
-            print_r($Row);
+           // print_r($Row);
             $Columns = $Row;
         }
         //print_r($Columns);
@@ -79,7 +79,7 @@
                 //print_r($params["body"]["metadata"]);
 
                 $jsonItem = json_encode($params['body']);
-                
+                print_r($Row[23])
                 if ($Row[23]=="x") {
                     echo "es una capilla";
                     # code...
@@ -95,7 +95,7 @@
 		//echo $collectionID;
                 uploadItem($jsonItem, $collectionID, $jsessionID);
             }
-            echo "prueba";
+            
         }
     }
 
