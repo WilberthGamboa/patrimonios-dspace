@@ -79,6 +79,7 @@
                 //print_r($params["body"]["metadata"]);
 
                 $jsonItem = json_encode($params['body']);
+                /*
                 print_r($Row[23]);
                 print_r($Row[22]);
                 if ($Row[23]=="x") {
@@ -90,6 +91,9 @@
                     # code...
                 }
                // echo $jsonItem;
+               */
+              //echo $Row[9];
+              print_r($Row[9]);
                 $collectionID = chooseEntidad($Row[9]);
 
 		//echo $Row[9];
