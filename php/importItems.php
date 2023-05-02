@@ -78,7 +78,7 @@
                 //print_r($params["body"]["metadata"]);
 
                 $jsonItem = json_encode($params['body']);
-                echo "prueba";
+                
                 if ($Row[23]=="x") {
                     echo "es una capilla";
                     # code...
@@ -94,6 +94,7 @@
 		//echo $collectionID;
                 uploadItem($jsonItem, $collectionID, $jsessionID);
             }
+            echo "prueba";
         }
     }
 
