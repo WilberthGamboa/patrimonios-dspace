@@ -88,7 +88,7 @@
               //echo $Row[9];
               //print_r($Row[7]);
             //  
-            print_r($Row[9]);
+            //print_r($Row[9]);
             
             //print_r($Row[23]);
             echo "\n";
@@ -98,9 +98,11 @@
                 echo "es una capilla";
                 # code...
             }
-            if ($Row[20]=="x") {
+            //se supone 18 en el excel 19  o sea s
+            if ($Row[18]=="x") {
                 echo "es una parroquia";
                 # code...
+                echo "\n";
             }
                 $collectionID = chooseEntidad($Row[9]);
 
