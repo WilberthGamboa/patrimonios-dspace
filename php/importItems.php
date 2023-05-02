@@ -100,6 +100,7 @@
     function chooseEntidad($entidad){
         switch ($entidad){
             case "Yucatán":
+                echo "yucatan /n"
                 return "7e137ff6-ea53-4175-b254-01522fffb80b";
                 break;
             case "Campeche":
