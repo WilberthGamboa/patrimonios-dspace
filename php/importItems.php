@@ -79,11 +79,11 @@
 
                 $jsonItem = json_encode($params['body']);
                 if ($Row[23]=="x") {
-                    echo "es una capilla"
+                    echo "es una capilla";
                     # code...
                 }
                 if ($Row[20]=="x") {
-                    echo "es una parroquia"
+                    echo "es una parroquia";
                     # code...
                 }
                // echo $jsonItem;
