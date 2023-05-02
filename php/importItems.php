@@ -1,6 +1,7 @@
 <?php
 
     include 'dspaceFunctions.php';
+    define('ESTADO', 'Yucatán'); //Campeche // Quintana Roo
 
     $output = "";
     $Columns = array();
@@ -90,9 +91,6 @@
             //  
             //print_r($Row[9]);
             
-            //print_r($Row[23]);
-            echo "\n";
-
 
               if ($Row[23]=="x") {
                 echo "es una capilla";
