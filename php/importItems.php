@@ -90,6 +90,9 @@
             //  print_r($Row[8]);
             
             print_r($Row[23]);
+            echo "\n";
+
+
               if ($Row[23]=="x") {
                 echo "es una capilla";
                 # code...
