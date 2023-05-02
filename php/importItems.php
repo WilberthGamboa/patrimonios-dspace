@@ -1,7 +1,7 @@
 <?php
 
     include 'dspaceFunctions.php';
-    define('ESTADO', 'Yucatán'); //Campeche // Quintana Roo
+    define("ESTADO", 'Yucatán'); //Campeche // Quintana Roo
 
     $output = "";
     $Columns = array();
@@ -92,15 +92,15 @@
             //print_r($Row[9]);
             
 
-              if ($Row[23]=="x") {
-                echo "es una capilla";
+              if ($Row[23]=="x" &&$Row[9] == ESTADO ) {
+                echo "es una capilla de". ESTADO;
                 # code...
             }
             //se supone 18 en el excel 19  o sea s
-            if ($Row[18]=="x") {
-                echo "es una parroquia";
+            if ($Row[18]=="x" && == ESTADO ) {
+                echo "es una parroquia de " . ESTADO;
                 # code...
-                echo "\n";
+             
             }
                 $collectionID = chooseEntidad($Row[9]);
 
