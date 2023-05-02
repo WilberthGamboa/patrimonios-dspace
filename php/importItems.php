@@ -100,7 +100,7 @@
 
 		//echo $Row[9];
 		//echo $collectionID;
-                uploadItem($jsonItem, $collectionID, $jsessionID);
+               // uploadItem($jsonItem, $collectionID, $jsessionID);
             }
             
         }
