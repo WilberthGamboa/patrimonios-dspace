@@ -26,7 +26,7 @@
         $Reader = new SpreadsheetReader_XLSX("/home/usr_pat/patrimonios-dspace-master/datosexcel.xlsx");
         global $Columns, $params;
         foreach ($Reader as $Row){
-            //print_r($Row);
+            print_r($Row);
             $Columns = $Row;
         }
         //print_r($Columns);
@@ -101,7 +101,6 @@
     function chooseEntidad($entidad){
         switch ($entidad){
             case "Yucatán":
-                echo "yucatan /n";
                 return "7e137ff6-ea53-4175-b254-01522fffb80b";
                 break;
             case "Campeche":
