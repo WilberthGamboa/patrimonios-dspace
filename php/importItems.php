@@ -92,13 +92,14 @@
             //print_r($Row[9]);
             
 
-              if ($Row[23]=="x" &&$Row[9] == ESTADO ) {
-                echo "es una capilla de". ESTADO;
+              if ($Row[21]=="x" && $Row[9] == ESTADO ) {
+                echo "es una capilla de". ESTADO . "\n";
+                
                 # code...
             }
             //se supone 18 en el excel 19  o sea s
             if ($Row[18]=="x" &&$Row[9] == ESTADO ) {
-                echo "es una parroquia de " . ESTADO;
+                echo "es una parroquia de " . ESTADO . "\n";
                 # code...
              
             }
