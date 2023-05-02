@@ -20,8 +20,8 @@
         $currentDate = getdate(date("U"));
         $dspaceDate = "$currentDate[year]-$currentDate[mon]-$currentDate[mday]";
 
-        require('../spreadsheet-reader/php-excel-reader/excel_reader2.php');
-        require('../spreadsheet-reader/SpreadsheetReader_XLSX.php');
+        require('../spreadsheet-reader-master/php-excel-reader/excel_reader2.php');
+        require('../spreadsheet-reader-master/SpreadsheetReader_XLSX.php');
 
         $Reader = new SpreadsheetReader_XLSX("/home/usr_pat/patrimonios-dspace/datosexcel.xlsx");
         global $Columns, $params;
