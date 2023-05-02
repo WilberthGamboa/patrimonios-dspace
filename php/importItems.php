@@ -2,6 +2,9 @@
 
     include 'dspaceFunctions.php';
     define("ESTADO", 'Yucatán'); //Campeche // Quintana Roo
+    define("CAPILLA", 'ac1a06ab-df77-4ed1-84ce-c99f3a4c5ec1'); //Campeche // Quintana Roo
+    define("CONVENTO", 'e077e4f1-2f4c-4a6d-a0df-ff62a87375b2'); //Campeche // Quintana Roo
+    define("PARROQUIA", 'a04b8ffa-baf9-441b-856e-ba1a26e87017'); //Campeche // Quintana Roo
 
     $output = "";
     $Columns = array();
@@ -94,16 +97,17 @@
 
               if ($Row[21]=="x" && $Row[9] == ESTADO ) {
                 echo "es una capilla de". ESTADO . "\n";
+                uploadItem($jsonItem, CAPILLA, $jsessionID);
                 
                 # code...
             }
             //se supone 18 en el excel 19  o sea s
             if ($Row[18]=="x" &&$Row[9] == ESTADO ) {
                 echo "es una parroquia de " . ESTADO . "\n";
-                # code...
+                uploadItem($jsonItem, CONVENTO, $jsessionID);
              
             }
-                $collectionID = chooseEntidad($Row[9]);
+          //  $collectionID = chooseEntidad($Row[9]);
 
 		//echo $Row[9];
 		//echo $collectionID;
