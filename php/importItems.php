@@ -26,6 +26,7 @@
         $Reader = new SpreadsheetReader_XLSX("/home/usr_pat/patrimonios-dspace-master/datosexcel.xlsx");
         global $Columns, $params;
         foreach ($Reader as $Row){
+            //ola 
             print_r($Row);
             $Columns = $Row;
         }
