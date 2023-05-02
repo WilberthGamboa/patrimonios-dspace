@@ -78,7 +78,7 @@
                 //print_r($params["body"]["metadata"]);
 
                 $jsonItem = json_encode($params['body']);
-                echo "Antes del if";
+                echo $Row[23];
                 if ($Row[23]=="x") {
                     echo "es una capilla";
                     # code...
