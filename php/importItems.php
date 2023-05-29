@@ -155,7 +155,7 @@
         for( $i = $columnMin; $i <= $columnMax; $i++ ){
       
             if( $Row[$i] != "" ){
-                print_r($Columns[$i]);
+                print_r($Row[$i]);
                 $metadata = array( 'key' => $key, 'value' => $Columns[$i] );
              
                 array_push($params['body']['metadata'], $metadata);
