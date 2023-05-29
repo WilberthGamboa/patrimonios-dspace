@@ -167,11 +167,7 @@
       
 
         global $Columns, $params;
-        foreach ($Reader as $Row){
-            //ola 
-           // print_r($Row);
-            $Columns = $Row;
-        }
+       
         for( $i = $columnMin; $i <= $columnMax; $i++ ){
 
             if( $Row[$i] != "" ){
