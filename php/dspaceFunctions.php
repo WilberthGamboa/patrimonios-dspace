@@ -280,7 +280,7 @@ function config($propertie){
 
     function getItems($jsessionID){
 
-        $url = "http://".config('dspace.ip').":".config('dspace.port')."/rest/items/?limit=200";
+        $url = "http://".config('dspace.ip').":".config('dspace.port')."/rest/items/?limit=500";
 
         $ch = curl_init($url);
 

@@ -8,6 +8,7 @@
     $jsessionID = getUserSessionID();
     loginToDspace();
     $ids = getItems($jsessionID);
+    var_dump($ids);
     deleteItems($ids, $jsessionID);
 
     $output = "Éxito.";
