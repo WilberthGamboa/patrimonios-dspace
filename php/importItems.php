@@ -80,7 +80,7 @@
                 addRegularData( 'arq.SearchString',
                     getSingleData(17, 23, $Row).', '.$Row[0].', '.$Row[7].', '.$Row[8].', '.$Row[9]
                 );
-                print_r($params["body"]["metadata"]);
+             //   print_r($params["body"]["metadata"]);
 
                 //$jsonItem = json_encode($params['body']);
                 /*
