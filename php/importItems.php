@@ -96,14 +96,14 @@
             
 
               if ($Row[21]=="x" && $Row[9] == ESTADO ) {
-                echo "es una capilla de". ESTADO . "\n";
-                uploadItem($jsonItem, CAPILLA, $jsessionID);
+                //echo "es una capilla de". ESTADO . "\n";
+               // uploadItem($jsonItem, CAPILLA, $jsessionID);
                 
                 # code...
             }
             //se supone 18 en el excel 19  o sea s
             if ($Row[18]=="x" &&$Row[9] == ESTADO ) {
-                echo "es una parroquia de " . ESTADO . "\n";
+               // echo "es una parroquia de " . ESTADO . "\n";
                 uploadItem($jsonItem, CONVENTO, $jsessionID);
              
             }
@@ -142,6 +142,7 @@
         if( $data != "" ){
 
             $metadata = array( 'key' => $key, 'value' => $data );
+            
             array_push($params['body']['metadata'], $metadata);
         }
     }
@@ -156,6 +157,7 @@
             if( $Row[$i] != "" ){
 
                 $metadata = array( 'key' => $key, 'value' => $Columns[$i] );
+           
                 array_push($params['body']['metadata'], $metadata);
             }
         }
@@ -171,6 +173,7 @@
             if( $Row[$i] != "" ){
 
                 $metadata = array( 'key' => $key, 'value' => $Columns[$i] );
+                echo $metadata;
                 array_push($params['body']['metadata'], $metadata);
                 break;
             }
