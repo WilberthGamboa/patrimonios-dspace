@@ -163,9 +163,8 @@
 
     // Del Excel, son las celdas marcadas con "x" que NO se pueden repetir.
     function addSingleData( $key, $columnMin, $columnMax, $Row ){
-        echo($key);
-        echo("\n");
-        echo($Row);
+   
+        var_dump($Row);
         echo("\n");
         global $Columns, $params;
 
