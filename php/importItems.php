@@ -104,7 +104,7 @@
             //se supone 18 en el excel 19  o sea s
             if ($Row[18]=="x" &&$Row[9] == ESTADO ) {
                // echo "es una parroquia de " . ESTADO . "\n";
-                uploadItem($jsonItem, CONVENTO, $jsessionID);
+              //  uploadItem($jsonItem, CONVENTO, $jsessionID);
              
             }
           //  $collectionID = chooseEntidad($Row[9]);
