@@ -164,8 +164,8 @@
     // Del Excel, son las celdas marcadas con "x" que NO se pueden repetir.
     function addSingleData( $key, $columnMin, $columnMax, $Row ){
    
-        var_dump($Row);
-        echo("\n");
+      
+
         global $Columns, $params;
         foreach ($Reader as $Row){
             //ola 
@@ -177,7 +177,7 @@
             if( $Row[$i] != "" ){
 
                 $metadata = array( 'key' => $key, 'value' => $Columns[$i] );
-                print_r($Columns[$i]);
+                // print_r($Row);
                 array_push($params['body']['metadata'], $metadata);
                 break;
             }
