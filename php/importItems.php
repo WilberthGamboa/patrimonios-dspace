@@ -82,7 +82,7 @@
                 );
                 print_r($params["body"]["metadata"]);
 
-                $jsonItem = json_encode($params['body']);
+                //$jsonItem = json_encode($params['body']);
                 /*
                 print_r($Row[23]);
                 print_r($Row[22]);
@@ -155,7 +155,7 @@
         for( $i = $columnMin; $i <= $columnMax; $i++ ){
 
             if( $Row[$i] != "" ){
-
+                echo $Row[$i];
                 $metadata = array( 'key' => $key, 'value' => $Columns[$i] );
            
                 array_push($params['body']['metadata'], $metadata);
