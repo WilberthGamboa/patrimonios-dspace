@@ -34,7 +34,7 @@
            // print_r($Row);
             $Columns = $Row;
         }
-        //print_r($Columns);
+        print_r($Columns);
 
        // $Reader = new SpreadsheetReader_XLSX($_FILES["excelFile"]["tmp_name"]);
         foreach ($Reader as $Row) {
@@ -167,12 +167,17 @@
         var_dump($Row);
         echo("\n");
         global $Columns, $params;
-
+        foreach ($Reader as $Row){
+            //ola 
+           // print_r($Row);
+            $Columns = $Row;
+        }
         for( $i = $columnMin; $i <= $columnMax; $i++ ){
 
             if( $Row[$i] != "" ){
 
                 $metadata = array( 'key' => $key, 'value' => $Columns[$i] );
+                print_r($Columns[$i]);
                 array_push($params['body']['metadata'], $metadata);
                 break;
             }
