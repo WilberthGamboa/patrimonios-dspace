@@ -47,7 +47,7 @@
                 addRegularData( 'dc.creator', $Row[9] );
                 addRegularData( 'dc.title', $Row[0] );
                 addRegularData( 'dc.date', $dspaceDate );
-               /* addRegularData( 'arq.Nombre', $Row[0] );
+                addRegularData( 'arq.Nombre', $Row[0] );
                 addRegularData( 'arq.Direccion', $Row[1] );
                 addRepeatedData( 'arq.Pertenencia', 2, 6, $Row );
                 addRegularData( 'arq.Localidad', $Row[7] );
@@ -79,7 +79,7 @@
                 addRegularData( 'arq.ObservGenerales', $Row[200] );
                 addRegularData( 'arq.SearchString',
                     getSingleData(17, 23, $Row).', '.$Row[0].', '.$Row[7].', '.$Row[8].', '.$Row[9]
-                );*/
+                );
                 //print_r($params["body"]["metadata"]);
 
                 $jsonItem = json_encode($params['body']);
