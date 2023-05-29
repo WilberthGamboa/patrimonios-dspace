@@ -150,14 +150,14 @@
     // Del Excel, son las celdas marcadas con "x" que se pueden repetir.
     function addRepeatedData( $key, $columnMin, $columnMax, $Row ){
 
-  
+        global $Columns, $params;
 
         for( $i = $columnMin; $i <= $columnMax; $i++ ){
-
+      
             if( $Row[$i] != "" ){
-                
+                print_r($Columns[$i]);
                 $metadata = array( 'key' => $key, 'value' => $Columns[$i] );
-                var_dump( $metadata);
+             
                 array_push($params['body']['metadata'], $metadata);
             }
         }
@@ -171,7 +171,7 @@
         for( $i = $columnMin; $i <= $columnMax; $i++ ){
 
             if( $Row[$i] != "" ){
-
+                
                 $metadata = array( 'key' => $key, 'value' => $Columns[$i] );
                 echo $Columns[$i];
                 array_push($params['body']['metadata'], $metadata);
