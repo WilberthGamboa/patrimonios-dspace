@@ -157,7 +157,7 @@
             if( $Row[$i] != "" ){
                 
                 $metadata = array( 'key' => $key, 'value' => $Columns[$i] );
-                var_dump($metadata);
+                echo $Columns[$i];
                 array_push($params['body']['metadata'], $metadata);
             }
         }
