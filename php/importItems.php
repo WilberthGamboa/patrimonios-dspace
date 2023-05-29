@@ -148,21 +148,18 @@
     }
 
     // Del Excel, son las celdas marcadas con "x" que se pueden repetir.
-    function addRepeatedData( $key, $columnMin, $columnMax, $Row ){
-
+    function addRepeatedData($key, $columnMin, $columnMax, $Row) {
         global $Columns, $params;
-
-        for( $i = $columnMin; $i <= $columnMax; $i++ ){
-      
-            if( $Row[$i] != "" ){
-                print_r($Row[$i]);
-                $metadata = array( 'key' => $key, 'value' => $Columns[$i] );
-             
+    
+        for ($i = $columnMin; $i <= $columnMax; $i++) {
+            if ($Row[$i] != "") {
+                $metadata = array('key' => $key, 'value' => $Columns[$i - count($Columns)]);
+                print_r($metadata);
                 array_push($params['body']['metadata'], $metadata);
             }
         }
     }
-
+    
     // Del Excel, son las celdas marcadas con "x" que NO se pueden repetir.
     function addSingleData( $key, $columnMin, $columnMax, $Row ){
 
