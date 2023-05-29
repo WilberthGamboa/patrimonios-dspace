@@ -157,7 +157,7 @@
             if( $Row[$i] != "" ){
                 
                 $metadata = array( 'key' => $key, 'value' => $Columns[$i] );
-                echo $Columns[$i];
+             
                 array_push($params['body']['metadata'], $metadata);
             }
         }
@@ -173,7 +173,7 @@
             if( $Row[$i] != "" ){
 
                 $metadata = array( 'key' => $key, 'value' => $Columns[$i] );
-                //echo $metadata;
+                echo $Columns[$i];
                 array_push($params['body']['metadata'], $metadata);
                 break;
             }
