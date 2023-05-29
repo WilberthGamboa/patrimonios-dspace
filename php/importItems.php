@@ -80,9 +80,9 @@
                 addRegularData( 'arq.SearchString',
                     getSingleData(17, 23, $Row).', '.$Row[0].', '.$Row[7].', '.$Row[8].', '.$Row[9]
                 );
-             //   print_r($params["body"]["metadata"]);
+                //print_r($params["body"]["metadata"]);
 
-                //$jsonItem = json_encode($params['body']);
+                $jsonItem = json_encode($params['body']);
                 /*
                 print_r($Row[23]);
                 print_r($Row[22]);
@@ -96,15 +96,15 @@
             
 
               if ($Row[21]=="x" && $Row[9] == ESTADO ) {
-                //echo "es una capilla de". ESTADO . "\n";
-               // uploadItem($jsonItem, CAPILLA, $jsessionID);
+                echo "es una capilla de". ESTADO . "\n";
+                uploadItem($jsonItem, CAPILLA, $jsessionID);
                 
                 # code...
             }
             //se supone 18 en el excel 19  o sea s
             if ($Row[18]=="x" &&$Row[9] == ESTADO ) {
-               // echo "es una parroquia de " . ESTADO . "\n";
-              //  uploadItem($jsonItem, CONVENTO, $jsessionID);
+                echo "es una parroquia de " . ESTADO . "\n";
+                uploadItem($jsonItem, CONVENTO, $jsessionID);
              
             }
           //  $collectionID = chooseEntidad($Row[9]);
@@ -142,35 +142,38 @@
         if( $data != "" ){
 
             $metadata = array( 'key' => $key, 'value' => $data );
-            
             array_push($params['body']['metadata'], $metadata);
         }
     }
 
     // Del Excel, son las celdas marcadas con "x" que se pueden repetir.
-    function addRepeatedData($key, $columnMin, $columnMax, $Row) {
-        global $Columns, $params;
-    
-        for ($i = $columnMin; $i <= $columnMax; $i++) {
-            if ($Row[$i] != "") {
-                $metadata = array('key' => $key, 'value' => $Columns[$i - count($Columns)]);
-                print_r($metadata);
-                array_push($params['body']['metadata'], $metadata);
-            }
-        }
-    }
-    
-    // Del Excel, son las celdas marcadas con "x" que NO se pueden repetir.
-    function addSingleData( $key, $columnMin, $columnMax, $Row ){
+    function addRepeatedData( $key, $columnMin, $columnMax, $Row ){
 
         global $Columns, $params;
 
         for( $i = $columnMin; $i <= $columnMax; $i++ ){
 
             if( $Row[$i] != "" ){
-                
+
                 $metadata = array( 'key' => $key, 'value' => $Columns[$i] );
-                echo $Columns[$i];
+                array_push($params['body']['metadata'], $metadata);
+            }
+        }
+    }
+
+    // Del Excel, son las celdas marcadas con "x" que NO se pueden repetir.
+    function addSingleData( $key, $columnMin, $columnMax, $Row ){
+        echo($key);
+        echo("\n");
+        echo($Row);
+        echo("\n");
+        global $Columns, $params;
+
+        for( $i = $columnMin; $i <= $columnMax; $i++ ){
+
+            if( $Row[$i] != "" ){
+
+                $metadata = array( 'key' => $key, 'value' => $Columns[$i] );
                 array_push($params['body']['metadata'], $metadata);
                 break;
             }
