@@ -1,9 +1,9 @@
 <?php
 
     include 'dspaceFunctions.php';
-    define("ESTADO", 'Campeche'); //Campeche // Quintana Roo
-    define("CAPILLA", '24ac0efd-dffb-422b-992c-2166e55b53df'); //Campeche // Quintana Roo
-    define("CONVENTO", '5b300f08-36a6-4872-b0b4-47f31a2b3660'); //Campeche // Quintana Roo
+    define("ESTADO", 'Quintana Roo'); //Campeche // Quintana Roo
+    define("CAPILLA", '4761ccb0-b001-4993-8c51-f24f3f9b2c30'); //Campeche // Quintana Roo
+    define("CONVENTO", '29b09ef5-f3f6-4db2-8742-2f4d6d0a7d85'); //Campeche // Quintana Roo
     define("PARROQUIA", '905ea2ce-b820-494d-958e-a298932d73f9'); //Campeche // Quintana Roo
 
     $output = "";
