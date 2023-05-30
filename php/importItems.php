@@ -1,10 +1,10 @@
 <?php
 
     include 'dspaceFunctions.php';
-    define("ESTADO", 'Yucatán'); //Campeche // Quintana Roo
-    define("CAPILLA", 'ac1a06ab-df77-4ed1-84ce-c99f3a4c5ec1'); //Campeche // Quintana Roo
-    define("CONVENTO", 'e077e4f1-2f4c-4a6d-a0df-ff62a87375b2'); //Campeche // Quintana Roo
-    define("PARROQUIA", 'a04b8ffa-baf9-441b-856e-ba1a26e87017'); //Campeche // Quintana Roo
+    define("ESTADO", 'Campeche'); //Campeche // Quintana Roo
+    define("CAPILLA", '24ac0efd-dffb-422b-992c-2166e55b53df'); //Campeche // Quintana Roo
+    define("CONVENTO", '5b300f08-36a6-4872-b0b4-47f31a2b3660'); //Campeche // Quintana Roo
+    define("PARROQUIA", '905ea2ce-b820-494d-958e-a298932d73f9'); //Campeche // Quintana Roo
 
     $output = "";
     $Columns = array();
